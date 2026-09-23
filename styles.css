@@ -1,0 +1,255 @@
+:root {
+  --paper: #f3ece1;
+  --ink: #1b1612;
+  --muted: #5c534a;
+  --line: #d8cec0;
+  --lacquer: #8a2a26;
+  --rail: #1b1612;
+  --space: 1.25rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.55;
+}
+
+::selection {
+  background: var(--lacquer);
+  color: var(--paper);
+}
+
+.skip {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0.4rem 0.7rem;
+}
+
+.skip:focus {
+  top: 1rem;
+  z-index: 2;
+}
+
+.rail {
+  display: none;
+}
+
+.page {
+  padding: 2.4rem var(--space) 3.5rem;
+}
+
+.place,
+.legal {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0.35rem 0 0.15rem;
+  font-family: Fraunces, serif;
+  font-weight: 640;
+  font-size: clamp(4.2rem, 18vw, 7.4rem);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+}
+
+.role {
+  max-width: 34rem;
+  margin: 1.1rem 0 0;
+  font-size: 1.2rem;
+}
+
+.role::after {
+  content: "";
+  display: block;
+  width: 5.5rem;
+  height: 3px;
+  margin-top: 1.35rem;
+  background: var(--lacquer);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem 1.4rem;
+  margin-top: 1.6rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+nav a,
+.links a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+nav a:hover,
+.links a:hover,
+.email:hover {
+  color: var(--lacquer);
+  border-bottom-color: var(--lacquer);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--lacquer);
+  outline-offset: 3px;
+}
+
+.block {
+  display: grid;
+  gap: 0.4rem 1.5rem;
+  padding: 2.4rem 0;
+  border-top: 1px solid var(--line);
+}
+
+.idx {
+  margin: 0;
+  font-family: Fraunces, serif;
+  font-style: italic;
+  font-weight: 520;
+  font-size: 2.4rem;
+  line-height: 1;
+  color: var(--lacquer);
+}
+
+h2 {
+  margin: 0 0 0.7rem;
+  font-family: Fraunces, serif;
+  font-size: 1.7rem;
+  font-weight: 520;
+  letter-spacing: -0.03em;
+}
+
+h3 {
+  margin: 1.15rem 0 0.2rem;
+  font-family: Fraunces, serif;
+  font-size: 1.2rem;
+  font-weight: 520;
+}
+
+.block p {
+  margin: 0;
+  max-width: 38rem;
+}
+
+.block article + article {
+  margin-top: 0.4rem;
+}
+
+.email {
+  display: inline-block;
+  margin-top: 0.3rem;
+  font-family: Fraunces, serif;
+  font-size: clamp(1.45rem, 4.4vw, 2.15rem);
+  font-weight: 520;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 2px solid var(--lacquer);
+}
+
+.links {
+  display: flex;
+  gap: 1.4rem;
+  margin: 1.1rem 0 0;
+  padding: 0;
+  list-style: none;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+footer {
+  border-top: 1px solid var(--line);
+  padding-top: 1rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (min-width: 720px) {
+  .page {
+    padding: 4.2rem 7vw 4.5rem;
+    max-width: 58rem;
+  }
+
+  .block {
+    grid-template-columns: 4.5rem 1fr;
+    align-items: start;
+    padding: 3rem 0;
+  }
+}
+
+@media (min-width: 900px) {
+  .rail {
+    display: flex;
+    position: fixed;
+    inset: 0 auto 0 0;
+    width: 3.1rem;
+    align-items: center;
+    justify-content: center;
+    background: var(--rail);
+    color: var(--paper);
+  }
+
+  .rail span {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .page {
+    margin-left: 3.1rem;
+    padding-left: 6.5vw;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  h1 {
+    animation: rise 700ms ease both;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(0.45rem);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
