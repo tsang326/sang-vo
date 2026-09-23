@@ -153,6 +153,13 @@ h3 {
   max-width: 38rem;
 }
 
+.block .when {
+  margin-bottom: 0.35rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+}
+
 .block article + article {
   margin-top: 0.4rem;
 }
