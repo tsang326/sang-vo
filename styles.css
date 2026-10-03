@@ -312,3 +312,9 @@ footer p {
     margin-top: 0.3rem;
   }
 }
+
+h3 a {
+  color: inherit;
+  text-decoration-color: var(--lacquer);
+  text-underline-offset: 0.15em;
+}
