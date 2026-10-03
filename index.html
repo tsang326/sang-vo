@@ -4,7 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sang Vo — Developer</title>
-  <meta name="description" content="Sang Vo (Vo Truong Sang), full-stack and backend developer in Ho Chi Minh City. Freelance AI training, data labeling, and LLM evaluation.">
+  <meta name="description" content="Sang Vo (Vo Truong Sang), full-stack and backend developer in Ho Chi Minh City. Freelance AI training, data labeling, and LLM evaluation, including Vietnamese.">
+  <link rel="canonical" href="https://tsang326.github.io/sang-vo/">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Sang Vo — Developer">
+  <meta property="og:description" content="Full-stack and backend developer in Ho Chi Minh City. Freelance AI training, data labeling, and LLM evaluation, including Vietnamese.">
+  <meta property="og:url" content="https://tsang326.github.io/sang-vo/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,6 +30,8 @@
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -34,7 +41,8 @@
         <p class="idx">01</p>
         <div>
           <h2>About</h2>
-          <p>I am a full-stack and backend developer in Ho Chi Minh City. Alongside software work, I take freelance tasks in AI training: data labeling, annotation, and LLM evaluation.</p>
+          <p>I am a full-stack and backend developer in Ho Chi Minh City with two years of production work: PHP and Go backends, MySQL, PostgreSQL and MongoDB, real-time features over WebSockets and WebRTC, and Flutter apps.</p>
+          <p>For my graduation thesis I fine-tuned LLaMA 2 into a Da Lat travel chatbot, and I now build AI app features at work. Alongside software, I take freelance AI training work: data labeling, annotation, and LLM evaluation, including Vietnamese-language review as a native speaker.</p>
         </div>
       </section>
 
@@ -44,11 +52,11 @@
           <h2>Services</h2>
           <article>
             <h3>AI training, annotation, and evaluation</h3>
-            <p>Data labeling, annotation, and review of model outputs, including LLM evaluation.</p>
+            <p>Data labeling, annotation, and review of model outputs against written guidelines and rubrics. Vietnamese-language evaluation for accuracy, naturalness, register, and cultural fit. Remote from Vietnam (UTC+7), 10–40 hours a week.</p>
           </article>
           <article>
             <h3>Software development</h3>
-            <p>Full-stack and backend development. Work includes backend, Flutter, and AI product features.</p>
+            <p>Backend APIs and databases, real-time features, query and performance work, and Flutter apps. Also deployment and server setup on Linux and Nginx.</p>
           </article>
         </div>
       </section>
@@ -58,26 +66,88 @@
         <div>
           <h2>Experience</h2>
           <article>
-            <h3>Wolffun</h3>
+            <h3>Full-stack Developer (AI apps), Wolffun</h3>
             <p class="when">Oct 2025–Present</p>
-            <p>Full-stack development on AI applications.</p>
+            <ul class="points">
+              <li>Real-time speech-to-speech voice for an AI companion app, using Flutter and WebRTC; fixed client-side video lag.</li>
+              <li>Features built from written specs, with APIs and UI self-tested before handoff.</li>
+              <li>Release work: deploys, app store submissions and listing fixes, post-release error monitoring.</li>
+            </ul>
           </article>
           <article>
-            <h3>Hanz</h3>
+            <h3>Backend Developer, Hanz (hotel management and booking)</h3>
             <p class="when">Sep 2024–May 2025</p>
-            <p>Backend development.</p>
+            <ul class="points">
+              <li>Built the modules that receive bookings from Booking.com and Agoda.</li>
+              <li>Fixed accounting bugs that caused data loss, and booking-intake bugs with missing fields and unsent emails.</li>
+              <li>Added a revenue and expense report per hotel; optimized slow queries on a live system handling about 200 bookings a day.</li>
+            </ul>
           </article>
         </div>
       </section>
 
-      <section id="contact" class="block">
+      <section id="projects" class="block">
         <p class="idx">04</p>
+        <div>
+          <h2>Selected projects</h2>
+          <article>
+            <h3>Lovisand — dating and social app</h3>
+            <p class="when">2025 · PHP, MySQL, Flutter</p>
+            <p>Redesigned the search schema and queries for 131,000+ users, cutting API latency from about 20 s to 1–3 s. Fixed duplicate conversations and push notification bugs.</p>
+          </article>
+          <article>
+            <h3>Donamix — social app for chat, travel, and streaming</h3>
+            <p class="when">2025 · Go, MongoDB, MySQL, WebSockets, Flutter</p>
+            <p>Backend API, API gateway routing, and a WebSocket chat hub with media, files, and live member status. Posts, reactions, trips, missions with daily resets, and push notifications.</p>
+          </article>
+          <article>
+            <h3>More9 — bar, club, and restaurant management</h3>
+            <p class="when">2025 · PHP, MySQL, Nginx</p>
+            <p>Back end from scratch: bookings, orders, billing, and payments; role-based access for owners, staff, and affiliates with per-venue commissions; server deployment.</p>
+          </article>
+          <article>
+            <h3>XẾ and XẾ TÀI — driver booking apps</h3>
+            <p class="when">2025 · PHP, MySQL, WebSockets</p>
+            <p>Real-time back end for a rider app and a driver app: WebSocket matching and tracking, fare pricing with vouchers, wallets, and ride history.</p>
+          </article>
+          <article>
+            <h3>Da Lat travel chatbot — graduation thesis</h3>
+            <p class="when">2024 · Python, LLaMA 2</p>
+            <p>Collected and structured Q&amp;A data on Da Lat attractions, fine-tuned LLaMA 2, and tuned prompts and hyperparameters through repeated evaluation.</p>
+          </article>
+          <article>
+            <h3>Godot 4 assets</h3>
+            <p class="when">2026 · GDScript, shaders</p>
+            <p>Dialogue Kit and FX Kit 2D, add-ons for the Godot engine, sold on <a href="https://tsang1.itch.io" rel="noopener noreferrer">itch.io</a>.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" class="block">
+        <p class="idx">05</p>
+        <div>
+          <h2>Skills and education</h2>
+          <dl class="facts">
+            <dt>Languages</dt><dd>PHP, Go, Python, JavaScript, SQL, Dart</dd>
+            <dt>Back end</dt><dd>Laravel, CodeIgniter, REST APIs, WebSockets, WebRTC, role-based access</dd>
+            <dt>Data</dt><dd>MySQL, PostgreSQL, MongoDB</dd>
+            <dt>Front end</dt><dd>Flutter, React, Vue</dd>
+            <dt>Ops</dt><dd>Linux, Nginx, Git</dd>
+            <dt>Spoken</dt><dd>Vietnamese (native), English (B1–B2, working documents)</dd>
+            <dt>Education</dt><dd>B.S. Electronics and Telecommunications Engineering, VNU-HCM University of Science, 2020–2024</dd>
+          </dl>
+        </div>
+      </section>
+
+      <section id="contact" class="block">
+        <p class="idx">06</p>
         <div>
           <h2>Contact</h2>
           <p><a class="email" href="mailto:votruongsang05@gmail.com">votruongsang05@gmail.com</a></p>
           <ul class="links">
             <li><a href="https://www.linkedin.com/in/sang-vo-3ab615317" rel="noopener noreferrer">LinkedIn</a></li>
             <li><a href="https://github.com/tsang326" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://tsang1.itch.io" rel="noopener noreferrer">itch.io</a></li>
           </ul>
         </div>
       </section>
